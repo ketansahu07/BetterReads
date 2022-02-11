@@ -1,5 +1,12 @@
+spring.application.name: betterreads-data-loader
+
+datadump.location:
+  authors: /Users/ketansahu/Downloads/Code/BetterReads/authors.txt
+  works: /Users/ketansahu/Downloads/Code/BetterReads/works.txt
 
 spring:
+  main:
+    allow-circular-references: true
   data:
     cassandra:
       keyspace-name: main
