@@ -24,6 +24,6 @@ datastax.astra:
     
 astra.db:
   id:
-  region: North America
+  region: us-east1
   keyspace: main
   application.token:
