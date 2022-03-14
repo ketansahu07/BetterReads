@@ -1,8 +1,32 @@
 spring:
+  application:
+    name: betterreads
   security:
     oauth2:
       client:
         registration:
           github:
-            client-id:
-            client-secret: 
+            client-id: <github-app-client-id>
+            client-secret: <github-app-client-secret>
+  main:
+    allow-circular-references: true
+  data:
+    cassandra:
+      keyspace-name: main
+      username:
+      password:
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+datastax.astra:
+  secure-connect-bundle: secure-connect.zip
+
+astra.db:
+  id:
+  region: us-east1
+  keyspace: main
+  application.token:
